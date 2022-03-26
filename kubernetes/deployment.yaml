@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
       - name: krakend
-        image: mightyfoxx/osiris_krakend:v0.0
+        image: mightyfoxx/osiris_krakend:latest
         ports:
         - containerPort: 8080
         imagePullPolicy: IfNotPresent
-        #command: [ "./krakend" ]
-        #args: [ "run", "-c", "/config/krakend.json", "-p", "8080" ]
+        command: [ "krakend" ]
+        args: [ "run", "-c", "/etc/krakend/krakend.json", "-p", "8080" ]
         env:
         - name: KRAKEND_PORT
           value: "8080"
