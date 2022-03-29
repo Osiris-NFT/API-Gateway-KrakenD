@@ -1,6 +1,58 @@
 {
     "$schema": "https://www.krakend.io/schema/v3.json",
     "version": 3,
-    "endpoints": [],
+    "endpoints": [
+        {
+            "endpoint": "/api/post_publication",
+            "method": "POST",
+            "input_query_strings": [
+                "posted_publication"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/post_publication",
+                    "method": "POST",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/post_comment",
+            "method": "POST",
+            "input_query_strings": [
+                "publication_id",
+                "posted_comment"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/post_comment",
+                    "method": "POST",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/post_reply",
+            "method": "POST",
+            "input_query_strings": [
+                "publication_id",
+                "comment_id",
+                "posted_reply"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/post_reply",
+                    "method": "POST",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        }
+    ],
     "extra_config": {}
 }
