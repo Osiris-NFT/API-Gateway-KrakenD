@@ -52,6 +52,199 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/publication/{publication_id}",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/get_publication_by_id/{publication_id}",
+                    "method": "GET",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/{user_name}/publications",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/get_publications_of_user/{user_name}",
+                    "method": "GET",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/delete_publication/{publication_id}",
+            "method": "DELETE",
+            "backend": [
+                {
+                    "url_pattern": "/delete_publication_by_id/{publication_id}",
+                    "method": "DELETE",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/{user_name}/delete_publications",
+            "method": "DELETE",
+            "backend": [
+                {
+                    "url_pattern": "/delete_publications_of_user/{user_name}",
+                    "method": "DELETE",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/delete_comment/{comment_id}",
+            "method": "DELETE",
+            "input_query_strings": [
+                "publication_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/delete_comment_by_id",
+                    "method": "DELETE",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/delete_reply/{reply_id}",
+            "method": "DELETE",
+            "input_query_strings": [
+                "publication_id",
+                "comment_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/delete_reply_by_id",
+                    "method": "DELETE",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/like_publication/{publication_id}",
+            "method": "PATCH",
+            "backend": [
+                {
+                    "url_pattern": "/like_publication",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/like_comment/{comment_id}",
+            "method": "PATCH",
+            "input_query_strings": [
+                "publication_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/like_comment",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/like_reply/{reply_id}",
+            "method": "PATCH",
+            "input_query_strings": [
+                "publication_id",
+                "comment_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/like_reply",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/unlike_publication/{publication_id}",
+            "method": "PATCH",
+            "backend": [
+                {
+                    "url_pattern": "/unlike_publication",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/unlike_comment/{comment_id}",
+            "method": "PATCH",
+            "input_query_strings": [
+                "publication_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/unlike_comment",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/unlike_reply/{reply_id}",
+            "method": "PATCH",
+            "input_query_strings": [
+                "publication_id",
+                "comment_id"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/unlike_reply",
+                    "method": "PATCH",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/recent_publications",
+            "method": "GET",
+            "input_query_strings": [
+                "hours_time_delta"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/get_recent_publications",
+                    "method": "GET",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
