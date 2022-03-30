@@ -245,6 +245,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/new_best_publications",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/new_best_publications",
+                    "method": "GET",
+                    "host": [
+                        "publication-svc.default.svc.cluster.local"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
