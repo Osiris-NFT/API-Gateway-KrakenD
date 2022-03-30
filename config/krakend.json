@@ -139,11 +139,11 @@
             ]
         },
         {
-            "endpoint": "/api/like_publication/{publication_id}",
+            "endpoint": "/api/upvote_publication/{publication_id}",
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/like_publication",
+                    "url_pattern": "/upvote_publication",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
@@ -152,14 +152,14 @@
             ]
         },
         {
-            "endpoint": "/api/like_comment/{comment_id}",
+            "endpoint": "/api/upvote_comment/{comment_id}",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id"
             ],
             "backend": [
                 {
-                    "url_pattern": "/like_comment",
+                    "url_pattern": "/upvote_comment",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
@@ -168,7 +168,7 @@
             ]
         },
         {
-            "endpoint": "/api/like_reply/{reply_id}",
+            "endpoint": "/api/upvote_reply/{reply_id}",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id",
@@ -176,7 +176,7 @@
             ],
             "backend": [
                 {
-                    "url_pattern": "/like_reply",
+                    "url_pattern": "/upvote_reply",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
@@ -185,11 +185,11 @@
             ]
         },
         {
-            "endpoint": "/api/unlike_publication/{publication_id}",
+            "endpoint": "/api/downvote_publication/{publication_id}",
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/unlike_publication",
+                    "url_pattern": "/downvote_publication",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
@@ -198,14 +198,14 @@
             ]
         },
         {
-            "endpoint": "/api/unlike_comment/{comment_id}",
+            "endpoint": "/api/downvote_comment/{comment_id}",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id"
             ],
             "backend": [
                 {
-                    "url_pattern": "/unlike_comment",
+                    "url_pattern": "/downvote_comment",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
@@ -214,7 +214,7 @@
             ]
         },
         {
-            "endpoint": "/api/unlike_reply/{reply_id}",
+            "endpoint": "/api/downvote_reply/{reply_id}",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id",
@@ -222,7 +222,7 @@
             ],
             "backend": [
                 {
-                    "url_pattern": "/unlike_reply",
+                    "url_pattern": "/downvote_reply",
                     "method": "PATCH",
                     "host": [
                         "publication-svc.default.svc.cluster.local"
