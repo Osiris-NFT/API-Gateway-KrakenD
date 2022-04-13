@@ -13,7 +13,7 @@
                     "url_pattern": "/post_publication",
                     "method": "POST",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -30,7 +30,7 @@
                     "url_pattern": "/post_comment",
                     "method": "POST",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -48,7 +48,7 @@
                     "url_pattern": "/post_reply",
                     "method": "POST",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -87,7 +87,7 @@
                     "url_pattern": "/delete_publication_by_id/{publication_id}",
                     "method": "DELETE",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -100,7 +100,7 @@
                     "url_pattern": "/delete_publications_of_user/{user_name}",
                     "method": "DELETE",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -116,7 +116,7 @@
                     "url_pattern": "/delete_comment_by_id",
                     "method": "DELETE",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -133,7 +133,7 @@
                     "url_pattern": "/delete_reply_by_id",
                     "method": "DELETE",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -146,7 +146,7 @@
                     "url_pattern": "/upvote_publication",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -162,7 +162,7 @@
                     "url_pattern": "/upvote_comment",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -179,7 +179,7 @@
                     "url_pattern": "/upvote_reply",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -192,7 +192,7 @@
                     "url_pattern": "/downvote_publication",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -208,7 +208,7 @@
                     "url_pattern": "/downvote_comment",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -225,7 +225,7 @@
                     "url_pattern": "/downvote_reply",
                     "method": "PATCH",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -241,7 +241,7 @@
                     "url_pattern": "/get_recent_publications",
                     "method": "GET",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
@@ -254,7 +254,7 @@
                     "url_pattern": "/new_best_publications",
                     "method": "GET",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
