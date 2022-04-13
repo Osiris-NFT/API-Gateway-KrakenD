@@ -61,7 +61,7 @@
                     "url_pattern": "/get_publication_by_id/{publication_id}",
                     "method": "GET",
                     "host": [
-                        "publications-svc.default.svc.cluster.local"
+                        "publications-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
