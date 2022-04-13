@@ -74,7 +74,7 @@
                     "url_pattern": "/get_publications_of_user/{user_name}",
                     "method": "GET",
                     "host": [
-                        "publication-svc.default.svc.cluster.local"
+                        "publication-svc.default.svc.cluster.local:8000"
                     ]
                 }
             ]
