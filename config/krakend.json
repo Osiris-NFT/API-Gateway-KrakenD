@@ -51,7 +51,7 @@
             ]
         },
         {
-            "endpoint": "/api/publication/{publication_id}",
+            "endpoint": "/api/publications/{publication_id}",
             "method": "GET",
             "backend": [
                 {
