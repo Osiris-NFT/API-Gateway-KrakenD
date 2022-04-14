@@ -19,10 +19,9 @@
             ]
         },
         {
-            "endpoint": "/api/comments/post",
+            "endpoint": "/api/publications/{publication_id}/comments/post",
             "method": "POST",
             "input_query_strings": [
-                "publication_id",
                 "posted_comment"
             ],
             "backend": [
@@ -36,11 +35,9 @@
             ]
         },
         {
-            "endpoint": "/api/replies/post",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/replies/post",
             "method": "POST",
             "input_query_strings": [
-                "publication_id",
-                "comment_id",
                 "posted_reply"
             ],
             "backend": [
@@ -106,11 +103,8 @@
             ]
         },
         {
-            "endpoint": "/api/comments/{comment_id}/delete",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/delete",
             "method": "DELETE",
-            "input_query_strings": [
-                "publication_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/delete_comment_by_id",
@@ -122,12 +116,8 @@
             ]
         },
         {
-            "endpoint": "/api/replies/{reply_id}/delete",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/replies/{reply_id}/delete",
             "method": "DELETE",
-            "input_query_strings": [
-                "publication_id",
-                "comment_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/delete_reply_by_id",
@@ -152,11 +142,8 @@
             ]
         },
         {
-            "endpoint": "/api/comments/{comment_id}/upvote",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/upvote",
             "method": "PATCH",
-            "input_query_strings": [
-                "publication_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/upvote_comment",
@@ -168,12 +155,8 @@
             ]
         },
         {
-            "endpoint": "/api/replies/{reply_id}/upvote",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/replies/{reply_id}/upvote",
             "method": "PATCH",
-            "input_query_strings": [
-                "publication_id",
-                "comment_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/upvote_reply",
@@ -198,11 +181,8 @@
             ]
         },
         {
-            "endpoint": "/api/comments/{comment_id}/downvote",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/downvote",
             "method": "PATCH",
-            "input_query_strings": [
-                "publication_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/downvote_comment",
@@ -214,12 +194,8 @@
             ]
         },
         {
-            "endpoint": "/api/replies/{reply_id}/downvote",
+            "endpoint": "/api/publications/{publication_id}/comments/{comment_id}/replies/{reply_id}/downvote",
             "method": "PATCH",
-            "input_query_strings": [
-                "publication_id",
-                "comment_id"
-            ],
             "backend": [
                 {
                     "url_pattern": "/downvote_reply",
