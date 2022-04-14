@@ -26,7 +26,7 @@
             ],
             "backend": [
                 {
-                    "url_pattern": "/post_comment",
+                    "url_pattern": "/post_comment/{publication_id}",
                     "method": "POST",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -42,7 +42,7 @@
             ],
             "backend": [
                 {
-                    "url_pattern": "/post_reply",
+                    "url_pattern": "/post_reply/{publication_id}/{comment_id}",
                     "method": "POST",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -107,7 +107,7 @@
             "method": "DELETE",
             "backend": [
                 {
-                    "url_pattern": "/delete_comment_by_id",
+                    "url_pattern": "/delete_comment_by_id/{publication_id}/{comment_id}",
                     "method": "DELETE",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -120,7 +120,7 @@
             "method": "DELETE",
             "backend": [
                 {
-                    "url_pattern": "/delete_reply_by_id",
+                    "url_pattern": "/delete_reply_by_id/{publication_id}/{comment_id}/{reply_id}",
                     "method": "DELETE",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -133,7 +133,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/upvote_publication",
+                    "url_pattern": "/upvote_publication/{publication_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -146,7 +146,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/upvote_comment",
+                    "url_pattern": "/upvote_comment/{publication_id}/{comment_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -159,7 +159,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/upvote_reply",
+                    "url_pattern": "/upvote_reply/{publication_id}/{comment_id}/{reply_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -172,7 +172,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/downvote_publication",
+                    "url_pattern": "/downvote_publication/{publication_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -185,7 +185,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/downvote_comment",
+                    "url_pattern": "/downvote_comment/{publication_id}/{comment_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
@@ -198,7 +198,7 @@
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/downvote_reply",
+                    "url_pattern": "/downvote_reply/{publication_id}/{comment_id}/{reply_id}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
