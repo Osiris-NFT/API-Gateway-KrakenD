@@ -3,7 +3,7 @@
     "version": 3,
     "endpoints": [
         {
-            "endpoint": "/api/post_publication",
+            "endpoint": "/api/publications/post",
             "method": "POST",
             "input_query_strings": [
                 "posted_publication"
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "endpoint": "/api/post_comment",
+            "endpoint": "/api/comments/post",
             "method": "POST",
             "input_query_strings": [
                 "publication_id",
@@ -36,7 +36,7 @@
             ]
         },
         {
-            "endpoint": "/api/post_reply",
+            "endpoint": "/api/replies/post",
             "method": "POST",
             "input_query_strings": [
                 "publication_id",
@@ -80,7 +80,7 @@
             ]
         },
         {
-            "endpoint": "/api/delete_publication/{publication_id}",
+            "endpoint": "/api/publications/{publication_id}/delete",
             "method": "DELETE",
             "backend": [
                 {
@@ -106,7 +106,7 @@
             ]
         },
         {
-            "endpoint": "/api/delete_comment/{comment_id}",
+            "endpoint": "/api/comments/{comment_id}/delete",
             "method": "DELETE",
             "input_query_strings": [
                 "publication_id"
@@ -122,7 +122,7 @@
             ]
         },
         {
-            "endpoint": "/api/delete_reply/{reply_id}",
+            "endpoint": "/api/replies/{reply_id}/delete",
             "method": "DELETE",
             "input_query_strings": [
                 "publication_id",
@@ -139,7 +139,7 @@
             ]
         },
         {
-            "endpoint": "/api/upvote_publication/{publication_id}",
+            "endpoint": "/api/publications/{publication_id}/upvote",
             "method": "PATCH",
             "backend": [
                 {
@@ -152,7 +152,7 @@
             ]
         },
         {
-            "endpoint": "/api/upvote_comment/{comment_id}",
+            "endpoint": "/api/comments/{comment_id}/upvote",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id"
@@ -168,7 +168,7 @@
             ]
         },
         {
-            "endpoint": "/api/upvote_reply/{reply_id}",
+            "endpoint": "/api/replies/{reply_id}/upvote",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id",
@@ -185,7 +185,7 @@
             ]
         },
         {
-            "endpoint": "/api/downvote_publication/{publication_id}",
+            "endpoint": "/api/publications/{publication_id}/downvote",
             "method": "PATCH",
             "backend": [
                 {
@@ -198,7 +198,7 @@
             ]
         },
         {
-            "endpoint": "/api/downvote_comment/{comment_id}",
+            "endpoint": "/api/comments/{comment_id}/downvote",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id"
@@ -214,7 +214,7 @@
             ]
         },
         {
-            "endpoint": "/api/downvote_reply/{reply_id}",
+            "endpoint": "/api/replies/{reply_id}/downvote",
             "method": "PATCH",
             "input_query_strings": [
                 "publication_id",
@@ -231,7 +231,7 @@
             ]
         },
         {
-            "endpoint": "/api/recent_publications",
+            "endpoint": "/api/publications/new",
             "method": "GET",
             "input_query_strings": [
                 "hours_time_delta"
@@ -247,7 +247,7 @@
             ]
         },
         {
-            "endpoint": "/api/new_best_publications",
+            "endpoint": "/api/publications/new_best",
             "method": "GET",
             "backend": [
                 {
