@@ -3,6 +3,19 @@
     "version": 3,
     "endpoints": [
         {
+            "endpoint": "/",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
+        },
+        {
             "endpoint": "/api/publications/post",
             "method": "POST",
             "input_query_strings": [
