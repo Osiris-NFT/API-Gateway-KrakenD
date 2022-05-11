@@ -16,6 +16,35 @@
             ]
         },
         {
+            "endpoint": "/api/images/{file_id}",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/images/{file_id}",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
+        },
+        {
+            "endpoint": "/api/publications/{publication_id}/upload",
+            "method": "POST",
+            "input_query_strings": [
+                "file"
+            ],
+            "backend": [
+                {
+                    "url_pattern": "/upload/{publication_id}",
+                    "method": "POST",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
+        },
+        {
             "endpoint": "/api/publications/post",
             "method": "POST",
             "input_query_strings": [
