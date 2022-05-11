@@ -18,6 +18,7 @@
         {
             "endpoint": "/api/images/{file_id}",
             "method": "GET",
+            "output_encoding": "string",
             "backend": [
                 {
                     "url_pattern": "/images/{file_id}",
