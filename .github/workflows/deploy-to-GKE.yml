@@ -13,7 +13,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: osiris-cluster    # Add your cluster name here.
-  GKE_ZONE: europe-west1-b   # Add your cluster zone here.
+  GKE_ZONE: europe-west1   # Add your cluster zone here.
   DEPLOYMENT_NAME: krakend-deployment # Add your deployment name here.
   #IMAGE: static-site
 
@@ -68,6 +68,7 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
+        kubectl delete -f https://raw.githubusercontent.com/Yoann-Renard/Osiris-NFT_Deployment/main/KrankenD/deployment.yaml
         kubectl apply -f https://raw.githubusercontent.com/Yoann-Renard/Osiris-NFT_Deployment/main/KrankenD/deployment.yaml
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
