@@ -6,9 +6,8 @@
 name: Deploy to GKE
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [trigger-deployment]
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
