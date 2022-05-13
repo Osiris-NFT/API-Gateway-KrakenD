@@ -31,7 +31,8 @@
         },
         {
             "endpoint": "/api/publications/{publication_id}/upload",
-            "method": "POST", 
+            "method": "POST",
+            "output_encoding": "no-op",
             "input_query_strings": [
                 "file"
             ],
