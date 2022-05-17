@@ -121,6 +121,19 @@
             ]
         },
         {
+            "endpoint": "/api/is/{publication_id}/liked_by/{user}",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/is/{publication_id}/liked_by/{user}",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
+        },
+        {
             "endpoint": "/api/publications/{publication_id}/delete",
             "method": "DELETE",
             "backend": [
@@ -173,11 +186,11 @@
             ]
         },
         {
-            "endpoint": "/api/publications/{publication_id}/upvote",
+            "endpoint": "/api/publications/{publication_id}/upvote_by/{user}",
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/upvote_publication/{publication_id}",
+                    "url_pattern": "/upvote_publication/{publication_id}/{user}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
