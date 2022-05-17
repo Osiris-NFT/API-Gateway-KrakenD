@@ -225,11 +225,11 @@
             ]
         },
         {
-            "endpoint": "/api/publications/{publication_id}/downvote",
+            "endpoint": "/api/publications/{publication_id}/downvoted_by/{user}",
             "method": "PATCH",
             "backend": [
                 {
-                    "url_pattern": "/downvote_publication/{publication_id}",
+                    "url_pattern": "/downvote_publication/{publication_id}/{user}",
                     "method": "PATCH",
                     "host": [
                         "publications-svc.default.svc.cluster.local:8000"
