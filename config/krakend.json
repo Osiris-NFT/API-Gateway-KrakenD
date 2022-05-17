@@ -30,6 +30,19 @@
             ]
         },
         {
+            "endpoint": "/api/{user}/liked_publications",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/{user}/liked_publications",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
+        },
+        {
             "endpoint": "/api/publications/{publication_id}/upload",
             "method": "POST",
             "output_encoding": "no-op",
