@@ -30,7 +30,7 @@
             ]
         },
         {
-            "endpoint": "/api/{user}/liked_publications",
+            "endpoint": "/api/liked_publications_of/{user}",
             "method": "GET",
             "backend": [
                 {
