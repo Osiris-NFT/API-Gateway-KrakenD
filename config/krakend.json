@@ -308,6 +308,7 @@
         {
             "endpoint": "/api/nft/__health",
             "method": "GET",
+            "output_encoding": "no-op",
             "backend": [
                 {
                     "url_pattern": "/",
