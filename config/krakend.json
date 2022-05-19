@@ -320,7 +320,7 @@
             ]
         },
         {
-            "endpoint": "/api/{wallet}/nfts",
+            "endpoint": "/api/nfts/{wallet}",
             "method": "GET",
             "backend": [
                 {
