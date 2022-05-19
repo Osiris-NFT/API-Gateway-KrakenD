@@ -318,6 +318,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/{wallet}/nfts",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/get_nft_of/{wallet}",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
