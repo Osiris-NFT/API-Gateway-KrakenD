@@ -306,7 +306,7 @@
             ]
         },
         {
-            "endpoint": "/api/nft",
+            "endpoint": "/api/nft/__health",
             "method": "GET",
             "backend": [
                 {
