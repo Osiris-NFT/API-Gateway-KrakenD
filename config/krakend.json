@@ -331,6 +331,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/nfts/token",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/token",
+                    "method": "GET",
+                    "host": [
+                        "nft-generation-svc.default.svc.cluster.local:8900"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
