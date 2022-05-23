@@ -360,6 +360,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/nfts/transfer",
+            "method": "POST",
+            "backend": [
+                {
+                    "url_pattern": "/transfer",
+                    "method": "POST",
+                    "host": [
+                        "nft-generation-svc.default.svc.cluster.local:8900"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
