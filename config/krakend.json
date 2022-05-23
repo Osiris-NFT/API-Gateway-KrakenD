@@ -373,6 +373,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/nfts/metadata_of/{file_id}",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/nfts/{file_id}/metadata",
+                    "method": "GET",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
