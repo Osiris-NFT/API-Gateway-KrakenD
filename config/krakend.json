@@ -344,6 +344,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "endpoint": "/api/nfts/{file_id}/update_wallet/{wallet}",
+            "method": "PATCH",
+            "backend": [
+                {
+                    "url_pattern": "/update_wallet/{file_id}/{wallet}",
+                    "method": "PATCH",
+                    "host": [
+                        "publications-svc.default.svc.cluster.local:8000"
+                    ]
+                }
+            ]
         }
     ],
     "extra_config": {}
