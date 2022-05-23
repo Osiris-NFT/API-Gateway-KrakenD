@@ -123,6 +123,7 @@
         {
             "endpoint": "/api/{user_name}/publications",
             "method": "GET",
+            "output_encoding": "no-op",
             "backend": [
                 {
                     "url_pattern": "/get_publications_of_user/{user_name}",
