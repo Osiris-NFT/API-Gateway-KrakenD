@@ -335,6 +335,9 @@
         {
             "endpoint": "/api/nfts/token",
             "method": "GET",
+            "input_query_strings": [
+                "hash"
+            ],
             "backend": [
                 {
                     "url_pattern": "/token",
